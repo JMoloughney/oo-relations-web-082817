@@ -4,7 +4,7 @@ class Tweet
   attr_reader :message, :user
 
 
-  ALL = []  
+  ALL = []
 
   def self.all
     ALL
