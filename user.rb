@@ -31,6 +31,15 @@ class User
 
   def liked_tweets
     # should return an array of all the Tweet instances, this user has liked
+    self.likes.map do |like|
+      like.tweet
+    end
+
   end
+
+  def like_tweet(tweet)
+    Like.new(tweet, self)
+  end
+
 
 end

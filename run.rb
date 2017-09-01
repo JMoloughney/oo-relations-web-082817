@@ -8,10 +8,16 @@ require 'pry'
 coffee_dad = User.new('coffee_dad')
 tea_uncle = User.new('tea_uncle')
 
-coffee_dad.post_tweet('having coffee')
+first_tweet = coffee_dad.post_tweet('having coffee')
 coffee_dad.post_tweet('great coffee')
-tea_uncle.post_tweet('great tea')
+tweet = tea_uncle.post_tweet('great tea')
 coffee_dad.post_tweet('coffee #')
+
+
+coffee_dad.liked_tweets
+
+tea_uncle.like_tweet(first_tweet)
+# => [<Tweet @message='having coffee'>]
 
 
 binding.pry
