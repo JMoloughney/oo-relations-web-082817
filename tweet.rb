@@ -20,5 +20,11 @@ class Tweet
     user.username
   end
 
+  def likes
+    Like.all.select do |like|
+      like.tweet == self
+    end
+  end
+
 
 end

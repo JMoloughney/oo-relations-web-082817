@@ -23,4 +23,14 @@ class User
     # @tweets << tweet
   end
 
+  def likes
+    Like.all.select do |like|
+      like.user == self
+    end
+  end
+
+  def liked_tweets
+    # should return an array of all the Tweet instances, this user has liked
+  end
+
 end
